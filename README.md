@@ -1,4 +1,4 @@
-# VagrantSample
+# VagrantUpAndRunning
 
 本レポジトリは[実践 Vagrant](https://www.amazon.co.jp/%E5%AE%9F%E8%B7%B5-Vagrant-Mitchell-Hashimoto/dp/4873116651/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=1ADA8SPDC3ZLU&keywords=vagrant&qid=1640352785&sprefix=vagran%2Caps%2C191&sr=8-1)を参考に、作成したものです。環境依存や学習目的のため各種ツールのバージョンや内容が書籍と異なっています。
 
