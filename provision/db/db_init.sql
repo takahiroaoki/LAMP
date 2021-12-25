@@ -1,0 +1,3 @@
+CREATE USER 'lamp'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'lamp'@'%';
+FLUSH PRIVILEGES;

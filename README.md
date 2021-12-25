@@ -1,41 +1,56 @@
 # VagrantUpAndRunning
 
-本レポジトリは[実践 Vagrant](https://www.amazon.co.jp/%E5%AE%9F%E8%B7%B5-Vagrant-Mitchell-Hashimoto/dp/4873116651/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=1ADA8SPDC3ZLU&keywords=vagrant&qid=1640352785&sprefix=vagran%2Caps%2C191&sr=8-1)を参考に、作成したものです。環境依存や学習目的のため各種ツールのバージョンや内容が書籍と異なっています。
+This project is for a simple web application with a "LAMP (Linux, Apache, MySQL, PHP)" environment composed by Vagrant.
 
-## 環境要件
-本レポジトリのコードの実行環境は以下です。
+## Requirement
+These code of this repository is executed in the following environment.
 - Windows 10
 - [VirtualBox 6.1.30](https://www.virtualbox.org/wiki/Downloads)
 - [Vagrant 2.2.19](https://www.vagrantup.com/downloads)
 
-※Vagrantのバージョンにより、対応しているVirtualBoxのバージョンも異なるため、他のバージョンを使用する方は注意してください。
+※If you want to other versions of these tools, be careful not to take wrong combinations of Vagrant and VirtualBox. A certain version of Vagrant can only handle certain versions of VirtualBox.
 
-※VirtualBoxのバージョンが古い場合、WindowsではHyper-Vを無効化しなければ仮想マシンの起動できないことがあります。Hyper-VはDocker Desktopを利用する際には有効にする必要があるため注意してください。
+※If the version of VirtualBox is somewhat old, we could not boot virtual machines unless we invalidate Hyper-V of Windows. Be careful not to invalidate Hyper-V without thinking because Hyper-V should be valid when you use Docker Desktop.
 
-## 実行方法
-### 仮想マシンの起動
-レポジトリ内で以下のコマンドを実行すると仮想マシンが起動します。
+The LAMP environment is bellow.
+- Ubuntu v16.04 LTS
+- Apache2 v2.4.18
+- MySQL v5.7.33
+- PHP
+
+## How to use
+
+Execute the following command inside this project to boot virtual machines. The behavior would be stable with the VirtualBox up.
+
 ```
 $ vagrant up
 ```
-また、以下のコマンドも参考にしてください。
-```
-# 仮想マシンを停止する際
-$ vagrant halt
 
-# 仮想マシンを消去する際
-$ vagrant destroy
-
-# 仮想マシンの起動中にVagrantfileを書き換えた際
-# 既存部分にも修正が入る場合はdestroyしてクリーンな環境を作り直した方が安全
-$ vagrant reload
-```
-### ブラウザからの動作確認
-ブラウザから
+Then, get access to
 http://localhost:8080/index/
-または
+or
 http://192.168.33.10/index/
-にアクセスしてください。
+from a browser that you like.
 
-## 参考文献
+## Appendix
+Refer to the following commands if you need it. The "\<virtual machine name\>" is an option.
+```
+# Boot virtual machines
+$ vagrant up <virtual machine name>
+
+# Stop virtual machines
+$ vagrant halt <virtual machine name>
+
+# Delete virtual machines
+$ vagrant destroy <virtual machine name>
+
+# Reload virtual machines when you rewrite setting files
+# It would be better to destroy them and up them again, especially when the existing settings were changed.
+$ vagrant reload <virtual machine name>
+
+# Get a ssh connection to a virtual machine
+$ vagrant ssh <virtual machine name>
+```
+
+## Reference
 - [実践 Vagrant](https://www.amazon.co.jp/%E5%AE%9F%E8%B7%B5-Vagrant-Mitchell-Hashimoto/dp/4873116651/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=1ADA8SPDC3ZLU&keywords=vagrant&qid=1640352785&sprefix=vagran%2Caps%2C191&sr=8-1)
