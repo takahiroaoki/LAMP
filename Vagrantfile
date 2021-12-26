@@ -16,6 +16,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Shell script for provisioning
     ## Install web server
     web.vm.provision "shell", path: "./provision/web/web.sh"
+    ## Install PHP
+    web.vm.provision "shell", path: "./provision/web/php.sh"
     ## Install mysql-client
     web.vm.provision "shell", inline: "apt-get install -y mysql-client-5.7"
   end

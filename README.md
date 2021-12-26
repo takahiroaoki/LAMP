@@ -16,7 +16,7 @@ The LAMP environment is bellow.
 - Ubuntu v16.04 LTS
 - Apache2 v2.4.18
 - MySQL v5.7.33
-- PHP
+- PHP v7.0
 
 ## How to use
 
@@ -27,9 +27,9 @@ $ vagrant up
 ```
 
 Then, get access to
-http://localhost:8080/index/
+http://localhost:8080/
 or
-http://192.168.33.10/index/
+http://192.168.33.10/
 from a browser that you like.
 
 ## Appendix
