@@ -43,23 +43,23 @@ $ mysql -u lamp -h 192.168.33.11
 ```
 
 ## Appendix
-Refer to the following commands if you need it. The "\<virtual machine name\>" is an option.
+Refer to the following commands if you need it. The "[virtual machine name]" is an option.
 ```
 # Boot virtual machines
-$ vagrant up <virtual machine name>
+$ vagrant up [virtual machine name]
 
 # Stop virtual machines
-$ vagrant halt <virtual machine name>
+$ vagrant halt [virtual machine name]
 
 # Delete virtual machines
-$ vagrant destroy <virtual machine name>
+$ vagrant destroy [virtual machine name]
 
 # Reload virtual machines when you rewrite setting files
 # It would be better to destroy them and up them again, especially when the existing settings were changed.
-$ vagrant reload <virtual machine name>
+$ vagrant reload [virtual machine name]
 
 # Get a ssh connection to a virtual machine
-$ vagrant ssh <virtual machine name>
+$ vagrant ssh [virtual machine name]
 ```
 
 ## Reference
