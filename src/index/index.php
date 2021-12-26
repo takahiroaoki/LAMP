@@ -1,5 +1,17 @@
 <?php
-    phpinfo();
+
+$mysqli = new mysqli('192.168.33.11', 'lamp', '', 'mysql');
+
+if ($mysqli->connect_error) {
+    echo $mysqli->connect_error;
+    exit();
+} else {
+    $mysqli->set_charset("utf8");
+    echo 'SUCESS to access to DB';
+}
+
+$mysqli->close();
+
 ?>
 
 <!DOCTYPE html>
