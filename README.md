@@ -19,7 +19,7 @@ The LAMP environment is bellow.
 - PHP v7.0
 
 ## How to use
-
+### Operation check
 Execute the following command inside this project to boot virtual machines. The behavior would be stable with the VirtualBox up.
 
 ```
@@ -31,6 +31,16 @@ http://localhost:8080/
 or
 http://192.168.33.10/
 from a browser that you like.
+
+### Get access to Database
+First, get a ssh connetcion to the virtual machine of "web".
+```
+$ vagrant ssh web
+```
+Then, get access to the database in the virtual machine of "db".
+```
+$ mysql -u lamp -h 192.168.33.11
+```
 
 ## Appendix
 Refer to the following commands if you need it. The "\<virtual machine name\>" is an option.
