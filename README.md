@@ -1,4 +1,4 @@
-# LAMP
+# lamp
 
 This project is for a simple web application with a "LAMP (Linux, Apache, MySQL, PHP)" environment composed by Vagrant.
 
